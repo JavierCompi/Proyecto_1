@@ -1,0 +1,281 @@
+:root {
+  --color-principal: #111;
+  --color-secundario: #d9d9d9;
+  --color-fondo: #f8f8f8;
+  --color-boton: #000;
+  --color-boton-hover: #333;
+  --color-footer-texto: #ccc;
+  --fuente-principal: 'Segoe UI', sans-serif;
+  --radio-borde: 12px;
+  --ancho-maximo: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-principal);
+  line-height: 1.6;
+}
+
+header {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin-bottom: 1rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.hero {
+  background: linear-gradient(to right, #fff, var(--color-secundario));
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: var(--ancho-maximo);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--color-boton);
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.modelos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.modelo {
+  background-color: var(--color-secundario);
+  padding: 1rem;
+  border-radius: var(--radio-borde);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+
+.modelo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+button {
+  background-color: var(--color-boton);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+.Mundo {
+  text-align: center;
+  padding: 2rem;
+  background-color: #eaeaea;
+}
+
+.Mundo-img {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  min-width: 300px;
+  height: auto;
+}
+
+.cartel-box {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.Interior {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.Interior_1 {
+  background-color: var(--color-secundario);
+  padding: 1rem;
+  border-radius: var(--radio-borde);
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.Interior_1 img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .Interior_1 {
+    width: 100%;
+  }
+}
+
+.Coche {
+  position: relative;
+  text-align: center;
+}
+
+
+.Coche_1-img {
+  width: 100%;
+  max-width: 1500px;
+  min-width: 300px;
+  height: auto;
+}
+
+.Coche_2-text {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.Rueda {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.Rueda_2 {
+  flex: 1;
+  min-width: 250px;
+}
+
+.Rueda_2 img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+footer {
+  background-color: var(--color-principal);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+  color: var(--color-footer-texto);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-column li:hover {
+  color: white;
+}
+
+footer form {
+  margin-top: 1rem;
+}
+
+footer input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+
+footer button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+}
+
+
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-principal);
+  margin-left: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
