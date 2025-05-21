@@ -191,7 +191,7 @@ button:hover {
   min-width: 250px;
 }
 
-.Rueda_2 img {
+.Rueda img {
   max-width: 100%;
   height: auto;
   flex: 1;
@@ -281,4 +281,23 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .Rueda {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .Rueda_2 {
+    min-width: 0;
+    width: 100%;
+  }
+  .Rueda img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
